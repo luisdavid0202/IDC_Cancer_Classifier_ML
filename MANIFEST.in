@@ -1,0 +1,4 @@
+include IDC_Cancer_Classifier/schema.sql
+graft IDC_Cancer_Classifier/static
+graft IDC_Cancer_Classifier/templates
+global-exclude *.pyc
