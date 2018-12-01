@@ -6,6 +6,8 @@ from flask import (
 
 from IDC_Cancer_Classifier.db import get_db
 
+from .classifier.prediction import predict
+
 bp = Blueprint('index', __name__, url_prefix='/')
 
 
@@ -13,5 +15,7 @@ bp = Blueprint('index', __name__, url_prefix='/')
 def register():
     if request.method == 'POST':
         pass
+
+    predict()
 
     return render_template('app/index.html')
