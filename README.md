@@ -21,7 +21,7 @@
     `$env:FLASK_ENV = "development"` <br/>    
    
 2. Create / restart the database    
-    * `flask init-db`
+    `flask init-db`
     
 3. Run the application    
-    * `flask run`
+    `flask run`
