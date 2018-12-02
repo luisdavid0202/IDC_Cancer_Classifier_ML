@@ -117,3 +117,6 @@ dist/
 build/
 *.egg-info/
 .idea/
+
+IDC_Cancer_Classifier/uploads/*
+!IDC_Cancer_Classifier/uploads/.gitkeep

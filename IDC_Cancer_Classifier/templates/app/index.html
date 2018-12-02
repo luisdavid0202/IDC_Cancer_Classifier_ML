@@ -10,6 +10,11 @@
         <input type="file" id="image" name="loadImage" accept="image/png, image/jpeg">
         <input type="submit" value="Upload">
     </form>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+
     <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
             href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
             href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0

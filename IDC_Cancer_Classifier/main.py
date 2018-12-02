@@ -16,12 +16,14 @@ bp = Blueprint('index', __name__, url_prefix='/')
 @bp.route('/', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
+        session.clear()
+
         file = request.files['loadImage']
         filename = '{0}.png'.format((str(uuid.uuid4())))
         path = os.path.join(current_app.root_path, 'uploads', filename)
 
         file.save(path)
 
-        predict(path)
+        flash(predict(path))
 
     return render_template('app/index.html')
